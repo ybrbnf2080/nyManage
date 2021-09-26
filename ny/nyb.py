@@ -2,12 +2,12 @@ import json
 import os 
 from sys import argv
 
-pathBaseJson= "~/.local/nylinuxUtil/base.json"
-pathBuildBash= "~/.local/nylinuxUtil/ny/build.sh"
+pathBaseJson= "/home/" + str(os.getlogin()) + "/.local/bin/nylinuxUtil/base.json"
+pathBuildBash= "/home/" + str(os.getlogin()) + "/.local/bin/nylinuxUtil/ny/build.sh"
 name = argv[1]
-print(name)
 fil = open(pathBaseJson, "r")
-
+pat= 1
+#print(fil.read())
 js = json.loads(fil.read())
 for i in  js["project"] :
     if i["name"] == name:

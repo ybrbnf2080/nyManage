@@ -5,14 +5,15 @@ import argparse
 from shutil import copyfile, copytree, rmtree
 from types import DynamicClassAttribute
 from typing_extensions import TypeAlias
-patPref = "~/.local/nylinuxUtil/lib/pref"
-pathBaseJson= "~/.local/nylinuxUtil/base.json"
+patPref = "/home/" + str(os.getlogin()) + "/.local/bin/nylinuxUtil/lib/pref"
+pathBaseJson= "/home/" + str(os.getlogin()) + "/.local/bin/nylinuxUtil/base.json"
 
 
 
 
 parser = argparse.ArgumentParser(description='A tutorial of argparse!')
 la = os.getcwd()
+print(la)
 parser.add_argument("--dir", default=la, type=str, help="dir for create proj ")
 parser.add_argument("--name", required=True, type=str, help="name proj")
 parser.add_argument("--desk", default=None, type=str, help="descriptions")
@@ -20,7 +21,6 @@ args = parser.parse_args()
 
 pat = args.dir +"/"+ args.name
 try: 
-        
     copytree(patPref, args.dir +"/"+ args.name+"/" )
 except FileExistsError:
     os.system("rm -r "+ pat)
@@ -44,7 +44,7 @@ base["project"].append({
     "descriptions": args.desk,
 
 })
-
+print(base)
 json.dump(base, open(pathBaseJson, "w"), indent=4)
 
 with open(pat + "/build/version.json", "r") as read_file:
