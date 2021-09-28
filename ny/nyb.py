@@ -14,7 +14,7 @@ for i in  js["project"] :
         pat = i["path"]
         print(pat)
 
-os.system("cd "+ pat + " && " + pathBuildBash) 
+os.system("cd "+ str(pat) + " && " + str(pathBuildBash)) 
 
 
 

@@ -1,6 +1,6 @@
 # !/bin/bash 
 pwd
-#sudo docker build -t pyinstaller ~/.local/nylinuxUtil/lib/DockerBuilder
+#sudo docker build -t pyinstaller ~/.local/bin/nylinuxUtil/lib/DockerBuilder
 if [ -d ./.env/ ]; then
     source ./.env/bin/activate
 fi
@@ -12,6 +12,6 @@ sudo docker run -it -v $(pwd):/src pyinstaller $@
 echo "Build complete"
 echo Start assembly pakage
 
-python  ~/.local/nylinuxUtil/ny/build.py
+python  ~/.local/bin/nylinuxUtil/ny/build.py
 
 
