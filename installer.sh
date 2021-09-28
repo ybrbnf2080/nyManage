@@ -1,8 +1,8 @@
 # !bin/bash
 
-cp -r ./lib ~/.local/bin/nylinuxUtil/lib
-cp -r ./ny ~/.local/bin/nylinuxUtil/ny
-cp -r ./ref ~/.local/bin/nylinuxUtil/ref
+cp -r ./lib ~/.local/bin/nylinuxUtil
+cp -r ./ny ~/.local/bin/nylinuxUtil
+cp -r ./ref ~/.local/bin/nylinuxUtil
 if ! [ -f ~/.local/bin/nylinuxUtil/base.json ]; then
     cp ./base.json ~/.local/bin/nylinuxUtil/base.json
 fi
@@ -16,3 +16,4 @@ fi
 
 echo "alias nys='python ~/.local/bin/nylinuxUtil/ny/nys.py \$@'" >> ~/.bashrc
 echo "alias nyb='python ~/.local/bin/nylinuxUtil/ny/nyb.py \$@'" >> ~/.bashrc
+source ~/bashrc
