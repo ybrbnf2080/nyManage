@@ -9,7 +9,7 @@ to install, just clone the repository and run installer.sh in the repository fol
 the rest will be distributed by itself
 
 ## Manage
-application command `ny`
+application command `ny ...`
 
 and arguments 
 - `s | start  [--name NAME] [--dir DIR] [--env ENV] [--desk DESK]`
