@@ -1,7 +1,9 @@
 #!/bin/bash
 
-echo start  $@
 cd /src/
+
+echo startBuild  $@
+
 wine python -m pip install -U -r ./requirements.txt
 if [ $# -eq 0 ]
     then
