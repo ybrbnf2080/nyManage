@@ -9,6 +9,19 @@ to install, just clone the repository and run installer.sh in the repository fol
 the rest will be distributed by itself
 
 ## Manage
+application command `ny`
+
+and arguments 
+- `s | start  [--name NAME] [--dir DIR] [--env ENV] [--desk DESK]`
+- `b | build [name project]`
+- `in | init [name] [path] [description]`
+- `up | update [no arguments]`
+- `vi | view [no arguments]`
+- `com | commit [name project]`
+
+
+
+## old dont use 
 2 command are now available
 - `nys [-h] [--name NAME] [--dir DIR] [--env ENV] [--desk DESK]` creates a new project and adds it to the database, env will create a virtual python environment (by default, false)
 - `nyb [name project]` builds the project into exe and packs it into a zip archive, you must specify the name of the project

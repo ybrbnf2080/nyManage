@@ -8,6 +8,7 @@ case $1 in
         echo "in | init"
         echo "up | update"
         echo "vi | view"
+        echo "com | commit"
         ;;
     s | start)
         echo start new project
